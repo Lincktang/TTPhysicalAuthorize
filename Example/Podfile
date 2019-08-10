@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'TTPhysicalAuthorize_Example' do
+  pod 'TTPhysicalAuthorize', :path => '../'
+
+  target 'TTPhysicalAuthorize_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
