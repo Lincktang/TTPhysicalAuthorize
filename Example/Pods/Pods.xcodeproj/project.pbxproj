@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		133ED43094872D5D25D4AB1470E44ED8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		20EC80C983AECA2BD229EDDA76087113 /* Pods-TTPhysicalAuthorize_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3A5A9B2C15756A1AA7461A653228025 /* Pods-TTPhysicalAuthorize_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32F1D2F8E2036E2DBB1446EFEF048055 /* Pods-TTPhysicalAuthorize_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB560170DA052D6BE2E6D175430710 /* Pods-TTPhysicalAuthorize_Tests-dummy.m */; };
+		41B9CC3CFF086759FF7FB9E374F34FB4 /* Pods-TTPhysicalAuthorize_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45707582DFDE12BE7CAD8F316C299AB5 /* Pods-TTPhysicalAuthorize_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56DEBCC3014F74F8718D3F5604A66165 /* TTPhysicalAuthorize-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8B7101532D3F8C7034F8D23B96D97 /* TTPhysicalAuthorize-dummy.m */; };
+		63D47ED60EBD73D62D330CE08A92B628 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 23538C52FEFB103B157B8EE7501072C0 /* ReplaceMe.m */; };
+		7E7A6F91C95B81E46739FD65A547782B /* TTPhysicalAuthorize-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CC45F941463AA8CD57FCF044968E419B /* TTPhysicalAuthorize-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3312D504F8C40214285A047B5EC6059 /* Pods-TTPhysicalAuthorize_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DF002AA4B35B28B6BB875C9077816D /* Pods-TTPhysicalAuthorize_Example-dummy.m */; };
+		D97B13D78C4A599898B71417C19668C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		E1E95019A1065BC44CCB349605814D73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D97BE2F2E9EACB04A50EEA0E5F1FA10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDD427C6994BB08797220118D7E4405D;
+			remoteInfo = TTPhysicalAuthorize;
+		};
+		643A53735C4FEA02E2818D5F79CA644F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87AE67F894C0F2DBD186939B3ABF012C;
+			remoteInfo = "Pods-TTPhysicalAuthorize_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A3D191366865EFAAD787DEE36C21527 /* Pods-TTPhysicalAuthorize_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTPhysicalAuthorize_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		0D98CC8FCFE863ECF75E61F500894C66 /* Pods-TTPhysicalAuthorize_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TTPhysicalAuthorize_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		23538C52FEFB103B157B8EE7501072C0 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = TTPhysicalAuthorize/Classes/ReplaceMe.m; sourceTree = "<group>"; };
+		2843ED0BBB275351D184BFEFAB35D314 /* TTPhysicalAuthorize.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TTPhysicalAuthorize.modulemap; sourceTree = "<group>"; };
+		2CC8B7101532D3F8C7034F8D23B96D97 /* TTPhysicalAuthorize-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTPhysicalAuthorize-dummy.m"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		38FE8215DE90A053A975CC448ADC8951 /* Pods-TTPhysicalAuthorize_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTPhysicalAuthorize_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		44F540D52C1567C6C453A450A9F176E1 /* Pods_TTPhysicalAuthorize_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TTPhysicalAuthorize_Tests.framework; path = "Pods-TTPhysicalAuthorize_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45707582DFDE12BE7CAD8F316C299AB5 /* Pods-TTPhysicalAuthorize_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TTPhysicalAuthorize_Tests-umbrella.h"; sourceTree = "<group>"; };
+		46466048D1EFDDD7732F831C4F6475F0 /* TTPhysicalAuthorize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TTPhysicalAuthorize.framework; path = TTPhysicalAuthorize.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46C0B8D10DB671A57D75D3617E824EB3 /* TTPhysicalAuthorize-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TTPhysicalAuthorize-Info.plist"; sourceTree = "<group>"; };
+		4875A8A23EE09219739FC317527E82A1 /* Pods-TTPhysicalAuthorize_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTPhysicalAuthorize_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		5723EFC864B405B37AFA924C72FC1958 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		5EB234B442DCD6EA4840F54CDC34974B /* Pods-TTPhysicalAuthorize_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TTPhysicalAuthorize_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5ED6C2D4A592C2A1E8A0409B15B0B741 /* TTPhysicalAuthorize.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TTPhysicalAuthorize.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		77DF002AA4B35B28B6BB875C9077816D /* Pods-TTPhysicalAuthorize_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TTPhysicalAuthorize_Example-dummy.m"; sourceTree = "<group>"; };
+		7BFB560170DA052D6BE2E6D175430710 /* Pods-TTPhysicalAuthorize_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TTPhysicalAuthorize_Tests-dummy.m"; sourceTree = "<group>"; };
+		8BDE0DBB3C463A7C619A1713B3D28A76 /* Pods-TTPhysicalAuthorize_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TTPhysicalAuthorize_Example.modulemap"; sourceTree = "<group>"; };
+		8F24A65CDA6CCFACD4A465A4B6FDC0C5 /* Pods-TTPhysicalAuthorize_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTPhysicalAuthorize_Example-frameworks.sh"; sourceTree = "<group>"; };
+		9275466BF5C0FCF9A943B817899E0D85 /* Pods_TTPhysicalAuthorize_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TTPhysicalAuthorize_Example.framework; path = "Pods-TTPhysicalAuthorize_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FDD944C7FD916E11B42A2EBE1B50ECF /* TTPhysicalAuthorize.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTPhysicalAuthorize.xcconfig; sourceTree = "<group>"; };
+		A2B20082EEBB3222D8576E13F7105E3F /* Pods-TTPhysicalAuthorize_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTPhysicalAuthorize_Example.release.xcconfig"; sourceTree = "<group>"; };
+		AB259D4782BA0B9F619C754F3B520B37 /* Pods-TTPhysicalAuthorize_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTPhysicalAuthorize_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B13501200AE02A1797F9E18923386A72 /* Pods-TTPhysicalAuthorize_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTPhysicalAuthorize_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BA6AF5B166BBA8AC20B4BAEF02601967 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		CC45F941463AA8CD57FCF044968E419B /* TTPhysicalAuthorize-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTPhysicalAuthorize-umbrella.h"; sourceTree = "<group>"; };
+		CF6F03C189B622A5763FB54A44D802BB /* TTPhysicalAuthorize-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTPhysicalAuthorize-prefix.pch"; sourceTree = "<group>"; };
+		D3A5A9B2C15756A1AA7461A653228025 /* Pods-TTPhysicalAuthorize_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TTPhysicalAuthorize_Example-umbrella.h"; sourceTree = "<group>"; };
+		F14A2A3BE21927556170CE0F0C05106B /* Pods-TTPhysicalAuthorize_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTPhysicalAuthorize_Tests-Info.plist"; sourceTree = "<group>"; };
+		F91B45E6AB05ECC98401D1CB3E67B8B3 /* Pods-TTPhysicalAuthorize_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TTPhysicalAuthorize_Tests.modulemap"; sourceTree = "<group>"; };
+		FF498C038F00607743E89DBA8EF6B5E6 /* Pods-TTPhysicalAuthorize_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTPhysicalAuthorize_Example-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D74FC4011023CA2592D88E951976C52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				133ED43094872D5D25D4AB1470E44ED8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E93E646CE1D4EAB94B4023BB4E10EC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D97B13D78C4A599898B71417C19668C4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA022E06BFDCCFCD8166BD8007874524 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E95019A1065BC44CCB349605814D73 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		017ED0D9C065DC52EB593EFB7D04EF47 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2843ED0BBB275351D184BFEFAB35D314 /* TTPhysicalAuthorize.modulemap */,
+				9FDD944C7FD916E11B42A2EBE1B50ECF /* TTPhysicalAuthorize.xcconfig */,
+				2CC8B7101532D3F8C7034F8D23B96D97 /* TTPhysicalAuthorize-dummy.m */,
+				46C0B8D10DB671A57D75D3617E824EB3 /* TTPhysicalAuthorize-Info.plist */,
+				CF6F03C189B622A5763FB54A44D802BB /* TTPhysicalAuthorize-prefix.pch */,
+				CC45F941463AA8CD57FCF044968E419B /* TTPhysicalAuthorize-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TTPhysicalAuthorize";
+			sourceTree = "<group>";
+		};
+		0296B2AF78E998E22B7142E055E62F31 /* TTPhysicalAuthorize */ = {
+			isa = PBXGroup;
+			children = (
+				23538C52FEFB103B157B8EE7501072C0 /* ReplaceMe.m */,
+				BAA50974F15DF59B5444113CC682889B /* Pod */,
+				017ED0D9C065DC52EB593EFB7D04EF47 /* Support Files */,
+			);
+			name = TTPhysicalAuthorize;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		02A1C7F81254021E215E46B8D7AD94C2 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0296B2AF78E998E22B7142E055E62F31 /* TTPhysicalAuthorize */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		26A84A063453D32FD2258259D711876F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9275466BF5C0FCF9A943B817899E0D85 /* Pods_TTPhysicalAuthorize_Example.framework */,
+				44F540D52C1567C6C453A450A9F176E1 /* Pods_TTPhysicalAuthorize_Tests.framework */,
+				46466048D1EFDDD7732F831C4F6475F0 /* TTPhysicalAuthorize.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EC160FC899FCE723DA1ECFFEC42B5E8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BD8F5FC10759238F1471971119C21FB /* Pods-TTPhysicalAuthorize_Example */,
+				A7F8FBABF4B1765323409C9F291162F3 /* Pods-TTPhysicalAuthorize_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7BD8F5FC10759238F1471971119C21FB /* Pods-TTPhysicalAuthorize_Example */ = {
+			isa = PBXGroup;
+			children = (
+				8BDE0DBB3C463A7C619A1713B3D28A76 /* Pods-TTPhysicalAuthorize_Example.modulemap */,
+				5EB234B442DCD6EA4840F54CDC34974B /* Pods-TTPhysicalAuthorize_Example-acknowledgements.markdown */,
+				38FE8215DE90A053A975CC448ADC8951 /* Pods-TTPhysicalAuthorize_Example-acknowledgements.plist */,
+				77DF002AA4B35B28B6BB875C9077816D /* Pods-TTPhysicalAuthorize_Example-dummy.m */,
+				8F24A65CDA6CCFACD4A465A4B6FDC0C5 /* Pods-TTPhysicalAuthorize_Example-frameworks.sh */,
+				FF498C038F00607743E89DBA8EF6B5E6 /* Pods-TTPhysicalAuthorize_Example-Info.plist */,
+				D3A5A9B2C15756A1AA7461A653228025 /* Pods-TTPhysicalAuthorize_Example-umbrella.h */,
+				4875A8A23EE09219739FC317527E82A1 /* Pods-TTPhysicalAuthorize_Example.debug.xcconfig */,
+				A2B20082EEBB3222D8576E13F7105E3F /* Pods-TTPhysicalAuthorize_Example.release.xcconfig */,
+			);
+			name = "Pods-TTPhysicalAuthorize_Example";
+			path = "Target Support Files/Pods-TTPhysicalAuthorize_Example";
+			sourceTree = "<group>";
+		};
+		A7F8FBABF4B1765323409C9F291162F3 /* Pods-TTPhysicalAuthorize_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F91B45E6AB05ECC98401D1CB3E67B8B3 /* Pods-TTPhysicalAuthorize_Tests.modulemap */,
+				0D98CC8FCFE863ECF75E61F500894C66 /* Pods-TTPhysicalAuthorize_Tests-acknowledgements.markdown */,
+				B13501200AE02A1797F9E18923386A72 /* Pods-TTPhysicalAuthorize_Tests-acknowledgements.plist */,
+				7BFB560170DA052D6BE2E6D175430710 /* Pods-TTPhysicalAuthorize_Tests-dummy.m */,
+				F14A2A3BE21927556170CE0F0C05106B /* Pods-TTPhysicalAuthorize_Tests-Info.plist */,
+				45707582DFDE12BE7CAD8F316C299AB5 /* Pods-TTPhysicalAuthorize_Tests-umbrella.h */,
+				AB259D4782BA0B9F619C754F3B520B37 /* Pods-TTPhysicalAuthorize_Tests.debug.xcconfig */,
+				0A3D191366865EFAAD787DEE36C21527 /* Pods-TTPhysicalAuthorize_Tests.release.xcconfig */,
+			);
+			name = "Pods-TTPhysicalAuthorize_Tests";
+			path = "Target Support Files/Pods-TTPhysicalAuthorize_Tests";
+			sourceTree = "<group>";
+		};
+		BAA50974F15DF59B5444113CC682889B /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				5723EFC864B405B37AFA924C72FC1958 /* LICENSE */,
+				BA6AF5B166BBA8AC20B4BAEF02601967 /* README.md */,
+				5ED6C2D4A592C2A1E8A0409B15B0B741 /* TTPhysicalAuthorize.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				02A1C7F81254021E215E46B8D7AD94C2 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				26A84A063453D32FD2258259D711876F /* Products */,
+				6EC160FC899FCE723DA1ECFFEC42B5E8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2A5D8B772F3ABC74B3AC87C50F7189F2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20EC80C983AECA2BD229EDDA76087113 /* Pods-TTPhysicalAuthorize_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6038BF647B5070C89F1A6C691EC0CE2C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E7A6F91C95B81E46739FD65A547782B /* TTPhysicalAuthorize-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD72F1FFEB8654ADBA69172FB6ECE906 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41B9CC3CFF086759FF7FB9E374F34FB4 /* Pods-TTPhysicalAuthorize_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		87AE67F894C0F2DBD186939B3ABF012C /* Pods-TTPhysicalAuthorize_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC9A45CD031E4D07068050C07F5C0F62 /* Build configuration list for PBXNativeTarget "Pods-TTPhysicalAuthorize_Example" */;
+			buildPhases = (
+				2A5D8B772F3ABC74B3AC87C50F7189F2 /* Headers */,
+				5553560D2F12A53B12BD85CA89B4C465 /* Sources */,
+				BA022E06BFDCCFCD8166BD8007874524 /* Frameworks */,
+				DE1B9E1508961BA70CFB68B68B6089FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5774A0F1A60C5A8790B4E5B46D485D4 /* PBXTargetDependency */,
+			);
+			name = "Pods-TTPhysicalAuthorize_Example";
+			productName = "Pods-TTPhysicalAuthorize_Example";
+			productReference = 9275466BF5C0FCF9A943B817899E0D85 /* Pods_TTPhysicalAuthorize_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C552A3DF5E881E7663BD1E4BBD66BDEB /* Pods-TTPhysicalAuthorize_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDCFF1FDC93B0BDA611D02B08D575570 /* Build configuration list for PBXNativeTarget "Pods-TTPhysicalAuthorize_Tests" */;
+			buildPhases = (
+				BD72F1FFEB8654ADBA69172FB6ECE906 /* Headers */,
+				734474B227331A423315815597F9798C /* Sources */,
+				5D74FC4011023CA2592D88E951976C52 /* Frameworks */,
+				CFC7BC81B01ABBA5F42849A27849A3E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68EDC556B0D12570202728307EEF075F /* PBXTargetDependency */,
+			);
+			name = "Pods-TTPhysicalAuthorize_Tests";
+			productName = "Pods-TTPhysicalAuthorize_Tests";
+			productReference = 44F540D52C1567C6C453A450A9F176E1 /* Pods_TTPhysicalAuthorize_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EDD427C6994BB08797220118D7E4405D /* TTPhysicalAuthorize */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 465807BE13293DBA8DFAD215F53750C7 /* Build configuration list for PBXNativeTarget "TTPhysicalAuthorize" */;
+			buildPhases = (
+				6038BF647B5070C89F1A6C691EC0CE2C /* Headers */,
+				3A015BA9D1AC78421F6BCBEC04D4F390 /* Sources */,
+				6E93E646CE1D4EAB94B4023BB4E10EC1 /* Frameworks */,
+				61009C759678E4AB754622143201963F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTPhysicalAuthorize;
+			productName = TTPhysicalAuthorize;
+			productReference = 46466048D1EFDDD7732F831C4F6475F0 /* TTPhysicalAuthorize.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 26A84A063453D32FD2258259D711876F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87AE67F894C0F2DBD186939B3ABF012C /* Pods-TTPhysicalAuthorize_Example */,
+				C552A3DF5E881E7663BD1E4BBD66BDEB /* Pods-TTPhysicalAuthorize_Tests */,
+				EDD427C6994BB08797220118D7E4405D /* TTPhysicalAuthorize */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61009C759678E4AB754622143201963F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFC7BC81B01ABBA5F42849A27849A3E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE1B9E1508961BA70CFB68B68B6089FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A015BA9D1AC78421F6BCBEC04D4F390 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D47ED60EBD73D62D330CE08A92B628 /* ReplaceMe.m in Sources */,
+				56DEBCC3014F74F8718D3F5604A66165 /* TTPhysicalAuthorize-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5553560D2F12A53B12BD85CA89B4C465 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3312D504F8C40214285A047B5EC6059 /* Pods-TTPhysicalAuthorize_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		734474B227331A423315815597F9798C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32F1D2F8E2036E2DBB1446EFEF048055 /* Pods-TTPhysicalAuthorize_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		68EDC556B0D12570202728307EEF075F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TTPhysicalAuthorize_Example";
+			target = 87AE67F894C0F2DBD186939B3ABF012C /* Pods-TTPhysicalAuthorize_Example */;
+			targetProxy = 643A53735C4FEA02E2818D5F79CA644F /* PBXContainerItemProxy */;
+		};
+		E5774A0F1A60C5A8790B4E5B46D485D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TTPhysicalAuthorize;
+			target = EDD427C6994BB08797220118D7E4405D /* TTPhysicalAuthorize */;
+			targetProxy = 4D97BE2F2E9EACB04A50EEA0E5F1FA10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		23FE30298D0365BD36BECA185DE5D471 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2B20082EEBB3222D8576E13F7105E3F /* Pods-TTPhysicalAuthorize_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TTPhysicalAuthorize_Example/Pods-TTPhysicalAuthorize_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TTPhysicalAuthorize_Example/Pods-TTPhysicalAuthorize_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		309986D2FA646B8E647E879CC8B32520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3D191366865EFAAD787DEE36C21527 /* Pods-TTPhysicalAuthorize_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TTPhysicalAuthorize_Tests/Pods-TTPhysicalAuthorize_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TTPhysicalAuthorize_Tests/Pods-TTPhysicalAuthorize_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4B346D75B92A2F5D1864FF6E10954470 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FDD944C7FD916E11B42A2EBE1B50ECF /* TTPhysicalAuthorize.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TTPhysicalAuthorize/TTPhysicalAuthorize-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTPhysicalAuthorize/TTPhysicalAuthorize-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TTPhysicalAuthorize/TTPhysicalAuthorize.modulemap";
+				PRODUCT_MODULE_NAME = TTPhysicalAuthorize;
+				PRODUCT_NAME = TTPhysicalAuthorize;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		79CB4EED6E8D91A8065D7113173D7CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4875A8A23EE09219739FC317527E82A1 /* Pods-TTPhysicalAuthorize_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TTPhysicalAuthorize_Example/Pods-TTPhysicalAuthorize_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TTPhysicalAuthorize_Example/Pods-TTPhysicalAuthorize_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9D18371F0A016B0E7584CC842A01FBB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB259D4782BA0B9F619C754F3B520B37 /* Pods-TTPhysicalAuthorize_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TTPhysicalAuthorize_Tests/Pods-TTPhysicalAuthorize_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TTPhysicalAuthorize_Tests/Pods-TTPhysicalAuthorize_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB44F04C469EA5D457E804B82A23CEFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FDD944C7FD916E11B42A2EBE1B50ECF /* TTPhysicalAuthorize.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TTPhysicalAuthorize/TTPhysicalAuthorize-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTPhysicalAuthorize/TTPhysicalAuthorize-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TTPhysicalAuthorize/TTPhysicalAuthorize.modulemap";
+				PRODUCT_MODULE_NAME = TTPhysicalAuthorize;
+				PRODUCT_NAME = TTPhysicalAuthorize;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		465807BE13293DBA8DFAD215F53750C7 /* Build configuration list for PBXNativeTarget "TTPhysicalAuthorize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB44F04C469EA5D457E804B82A23CEFE /* Debug */,
+				4B346D75B92A2F5D1864FF6E10954470 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
+				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC9A45CD031E4D07068050C07F5C0F62 /* Build configuration list for PBXNativeTarget "Pods-TTPhysicalAuthorize_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79CB4EED6E8D91A8065D7113173D7CAD /* Debug */,
+				23FE30298D0365BD36BECA185DE5D471 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDCFF1FDC93B0BDA611D02B08D575570 /* Build configuration list for PBXNativeTarget "Pods-TTPhysicalAuthorize_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D18371F0A016B0E7584CC842A01FBB7 /* Debug */,
+				309986D2FA646B8E647E879CC8B32520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

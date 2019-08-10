@@ -1,0 +1,6 @@
+framework module TTPhysicalAuthorize {
+  umbrella header "TTPhysicalAuthorize-umbrella.h"
+
+  export *
+  module * { export * }
+}

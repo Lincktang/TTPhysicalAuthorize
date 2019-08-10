@@ -62,10 +62,10 @@
 		7B656073C3E025175A9A5CF5 /* Pods_TTPhysicalAuthorize_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTPhysicalAuthorize_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FE0103ECC402D115A131061 /* Pods-TTPhysicalAuthorize_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTPhysicalAuthorize_Tests.release.xcconfig"; path = "Target Support Files/Pods-TTPhysicalAuthorize_Tests/Pods-TTPhysicalAuthorize_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		9D0BB529119DB3C4A2749C0A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		ABF975E7D1D6199ABCCBB88B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9D0BB529119DB3C4A2749C0A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		ABF975E7D1D6199ABCCBB88B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B02616605EF64EC0FD97D0C7 /* Pods-TTPhysicalAuthorize_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTPhysicalAuthorize_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TTPhysicalAuthorize_Tests/Pods-TTPhysicalAuthorize_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BB34BDDE185FE0AADD37D587 /* TTPhysicalAuthorize.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = TTPhysicalAuthorize.podspec; path = ../TTPhysicalAuthorize.podspec; sourceTree = "<group>"; };
+		BB34BDDE185FE0AADD37D587 /* TTPhysicalAuthorize.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TTPhysicalAuthorize.podspec; path = ../TTPhysicalAuthorize.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DFBFD90B91BD9B11F5F9FDF4 /* Pods-TTPhysicalAuthorize_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTPhysicalAuthorize_Example.debug.xcconfig"; path = "Target Support Files/Pods-TTPhysicalAuthorize_Example/Pods-TTPhysicalAuthorize_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +103,6 @@
 				B02616605EF64EC0FD97D0C7 /* Pods-TTPhysicalAuthorize_Tests.debug.xcconfig */,
 				8FE0103ECC402D115A131061 /* Pods-TTPhysicalAuthorize_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
