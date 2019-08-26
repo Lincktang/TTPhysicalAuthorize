@@ -1,8 +1,8 @@
 {
   "name": "TTPhysicalAuthorize",
-  "version": "0.1.0",
-  "summary": "A short description of TTPhysicalAuthorize.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.0.1",
+  "summary": "TTPhysicalAuthorize 是对iOS物理鉴权Face ID和Touch ID的调用封装",
+  "description": "TTPhysicalAuthorize 是对iOS物理鉴权Face ID和Touch ID的调用封装，\n提供开发者通过简单的方式使用设备的物理鉴权API",
   "homepage": "https://github.com/Lincktang/TTPhysicalAuthorize",
   "license": {
     "type": "MIT",
@@ -13,10 +13,14 @@
   },
   "source": {
     "git": "https://github.com/Lincktang/TTPhysicalAuthorize.git",
-    "tag": "0.1.0"
+    "tag": "0.0.1"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "TTPhysicalAuthorize/Classes/**/*"
+  "source_files": "TTPhysicalAuthorize/Classes/**/*",
+  "frameworks": [
+    "UIKit",
+    "LocalAuthentication"
+  ]
 }

@@ -1,5 +1,5 @@
 PODS:
-  - TTPhysicalAuthorize (0.1.0)
+  - TTPhysicalAuthorize (0.0.1)
 
 DEPENDENCIES:
   - TTPhysicalAuthorize (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TTPhysicalAuthorize: dc62f88a78d4cc696da114bf158191215e2d1906
+  TTPhysicalAuthorize: 7107d2cda865a510d10612275b21bde3873b69c4
 
 PODFILE CHECKSUM: aa66c7943f460554610fb57bfe4092958b949fc1
 

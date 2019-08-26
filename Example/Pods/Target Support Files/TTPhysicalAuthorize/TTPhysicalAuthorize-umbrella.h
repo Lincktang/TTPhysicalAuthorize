@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "TTAuthorizeManager.h"
+#import "TTPhysicalAuthorize.h"
 
 FOUNDATION_EXPORT double TTPhysicalAuthorizeVersionNumber;
 FOUNDATION_EXPORT const unsigned char TTPhysicalAuthorizeVersionString[];

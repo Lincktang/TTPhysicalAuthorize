@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qmI-ve-MRG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,12 +20,72 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZd-bo-bNR">
+                                <rect key="frame" x="37.5" y="164" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4ch-Zp-Mpe"/>
+                                    <constraint firstAttribute="width" constant="300" id="9Vq-o0-VWJ"/>
+                                </constraints>
+                                <state key="normal" title="识别设备生物识别类型"/>
+                                <connections>
+                                    <action selector="checkBiometryAction:" destination="whP-gf-Uak" eventType="touchUpInside" id="TXM-dK-7tq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsb-md-Q2A">
+                                <rect key="frame" x="37.5" y="224" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="JAM-c6-8PS"/>
+                                    <constraint firstAttribute="height" constant="30" id="Xn1-Vi-QIu"/>
+                                </constraints>
+                                <state key="normal" title="开启生物识别"/>
+                                <connections>
+                                    <action selector="applyAuthorizeAction:" destination="whP-gf-Uak" eventType="touchUpInside" id="aat-kx-UNr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGf-AD-cIP">
+                                <rect key="frame" x="37.5" y="284" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="YV8-Vk-bAJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="gqn-fi-Omr"/>
+                                </constraints>
+                                <state key="normal" title="开启带手机密码生物识别"/>
+                                <connections>
+                                    <action selector="systemAuthorizeAction:" destination="whP-gf-Uak" eventType="touchUpInside" id="J2M-ST-asV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NZd-bo-bNR" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="1KT-R1-SSk"/>
+                            <constraint firstItem="NZd-bo-bNR" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="100" id="8il-Jq-AL8"/>
+                            <constraint firstItem="kGf-AD-cIP" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="IRm-sK-auO"/>
+                            <constraint firstItem="kGf-AD-cIP" firstAttribute="top" secondItem="gsb-md-Q2A" secondAttribute="bottom" constant="30" id="SZx-6a-dIK"/>
+                            <constraint firstItem="gsb-md-Q2A" firstAttribute="top" secondItem="NZd-bo-bNR" secondAttribute="bottom" constant="30" id="f0E-sd-Eed"/>
+                            <constraint firstItem="gsb-md-Q2A" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="r9p-kP-JgG"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dG3-6y-8dR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="658" y="575"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dwp-u5-91s">
+            <objects>
+                <navigationController id="qmI-ve-MRG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3P9-ts-CBZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="whP-gf-Uak" kind="relationship" relationship="rootViewController" id="rVy-qr-9PW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wZU-av-2wM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183" y="576"/>
         </scene>
     </scenes>
 </document>
