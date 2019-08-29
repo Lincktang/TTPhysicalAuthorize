@@ -26,7 +26,8 @@ typedef NS_ENUM(NSInteger,TTAuthorizeError) {
 @interface TTAuthorizeManager : NSObject
 
 /**
- 当前设备支持的生物识别类型
+ 当前设备支持的生物识别类型，
+ 只用执行了- (void)canSupportAuthorize:(void (^) (TTAuthorizeBiometryType type, NSError *error))block;方法后才有正确的值
  */
 @property (nonatomic, readonly) TTAuthorizeBiometryType biometryType;
 /**
