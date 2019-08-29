@@ -6,7 +6,6 @@
 //
 
 #import "TTAuthorizeManager.h"
-#import <LocalAuthentication/LocalAuthentication.h>
 
 
 #define kErrorDomain @"身份识别错误"
