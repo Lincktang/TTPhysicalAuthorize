@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TTPhysicalAuthorize'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'TTPhysicalAuthorize 是对iOS物理鉴权Face ID和Touch ID的调用封装'
 
 # This description is used to generate tags and improve search results.
