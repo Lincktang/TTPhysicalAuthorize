@@ -38,8 +38,7 @@
         [_authorizeContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error];
     }
     if (error) {
-        NSString *msg = [self errorDescription:error];
-        error = [NSError errorWithDomain:msg code:error.code userInfo:@{NSLocalizedFailureReasonErrorKey:msg}];
+        error = [self authorizeErrorFromLAError:error];
     }else{
         if (@available(iOS 11.0, *)) {
             LABiometryType biometryType = _authorizeContext.biometryType;
@@ -81,53 +80,46 @@
                 successBlock();
             }
         }else{
-            if (error.code == LAErrorUserFallback) {//验证失败，用户点击了fallback按钮
+            NSError *failureErr = [self authorizeErrorFromLAError:error];
+
+            if (failureErr.code == TTAuthorizeErrorFallback) {//验证失败，用户点击了fallback按钮
                 if (backBlock) {
                     backBlock();
                 }
-            }else if (error.code == LAErrorUserCancel){//验证失败，用户点击了取消按钮
+            }else if (failureErr.code == TTAuthorizeErrorCancel){//验证失败，用户点击了取消按钮
                 if (cancelBlock) {
                     cancelBlock();
                 }
             }else{
-
-                if (@available(iOS 9.0, *)) {
+                if (failureErr.code == TTAuthorizeErrorLockout) {
                     //多次尝试指纹验证失败错误9.0后引入LAErrorTouchIDLockout,11.0后废弃改为LAErrorBiometryLockout
                     //出现这些错误后TouchID验证无法打开，需要验证手机密码才能正常使用
                     //如是TouchID验证，且捕获到此错误的，使用LAPolicyDeviceOwnerAuthentication
-                    BOOL isLockoutError = NO;
-                    BOOL isUsedTouchId = NO;
-                    if (error.code == LAErrorTouchIDLockout) {
-                        isLockoutError = YES;
-                        isUsedTouchId = YES;
-                    }
+                    BOOL isUsedTouchId = YES;
                     if (@available(iOS 11.0, *)){
-                        if (error.code == LAErrorBiometryLockout) {
-                            isLockoutError = YES;
-                        }
-                        isUsedTouchId = (context.biometryType == LABiometryTypeTouchID);
+                        isUsedTouchId = (self->_singleContext.biometryType == LABiometryTypeTouchID);
                     }
-                    if (isLockoutError && isUsedTouchId) {
-                        [self applySystemAuthorizeSuccess:^{
-                            if (successBlock) {
-                                successBlock();
-                            }
-                        } cancel:^{
-                            if (cancelBlock) {
-                                cancelBlock();
-                            }
-                        } otherFailure:^(NSError *error) {
-                            if (failureBlock) {
-                                failureBlock(error);
-                            }
-                        }];
-                        return;
+                    if (@available(iOS 9.0, *)) {
+                        if (isUsedTouchId) {
+                            [self applySystemAuthorizeSuccess:^{
+                                if (successBlock) {
+                                    successBlock();
+                                }
+                            } cancel:^{
+                                if (cancelBlock) {
+                                    cancelBlock();
+                                }
+                            } otherFailure:^(NSError *error) {
+                                if (failureBlock) {
+                                    failureBlock(error);
+                                }
+                            }];
+                            return;
+                        }
                     }
                 }
                 //验证失败，其他错误，直接返回错误信息
                 if (failureBlock) {
-                    NSString *errorMsg = [self errorDescription:error];
-                    NSError *failureErr = [NSError errorWithDomain:kErrorDomain code:error.code userInfo:@{NSLocalizedFailureReasonErrorKey:errorMsg}];
                     failureBlock(failureErr);
                 }
             }
@@ -152,53 +144,46 @@
                 successBlock();
             }
         }else{
-            if (error.code == LAErrorUserFallback) {//验证失败，用户点击了fallback按钮
+            NSError *failureErr = [self authorizeErrorFromLAError:error];
+
+            if (failureErr.code == TTAuthorizeErrorFallback) {//验证失败，用户点击了fallback按钮
                 if (backBlock) {
                     backBlock();
                 }
-            }else if (error.code == LAErrorUserCancel){//验证失败，用户点击了取消按钮
+            }else if (failureErr.code == TTAuthorizeErrorCancel){//验证失败，用户点击了取消按钮
                 if (cancelBlock) {
                     cancelBlock();
                 }
             }else{
-                
-                if (@available(iOS 9.0, *)) {
+                if (failureErr.code == TTAuthorizeErrorLockout) {
                     //多次尝试指纹验证失败错误9.0后引入LAErrorTouchIDLockout,11.0后废弃改为LAErrorBiometryLockout
                     //出现这些错误后TouchID验证无法打开，需要验证手机密码才能正常使用
                     //如是TouchID验证，且捕获到此错误的，使用LAPolicyDeviceOwnerAuthentication
-                    BOOL isLockoutError = NO;
-                    BOOL isUsedTouchId = NO;
-                    if (error.code == LAErrorTouchIDLockout) {
-                        isLockoutError = YES;
-                        isUsedTouchId = YES;
-                    }
+                    BOOL isUsedTouchId = YES;
                     if (@available(iOS 11.0, *)){
-                        if (error.code == LAErrorBiometryLockout) {
-                            isLockoutError = YES;
-                        }
                         isUsedTouchId = (self->_singleContext.biometryType == LABiometryTypeTouchID);
                     }
-                    if (isLockoutError && isUsedTouchId) {
-                        [self applySystemAuthorizeSuccess:^{
-                            if (successBlock) {
-                                successBlock();
-                            }
-                        } cancel:^{
-                            if (cancelBlock) {
-                                cancelBlock();
-                            }
-                        } otherFailure:^(NSError *error) {
-                            if (failureBlock) {
-                                failureBlock(error);
-                            }
-                        }];
-                        return;
+                    if (@available(iOS 9.0, *)) {
+                        if (isUsedTouchId) {
+                            [self applySystemAuthorizeSuccess:^{
+                                if (successBlock) {
+                                    successBlock();
+                                }
+                            } cancel:^{
+                                if (cancelBlock) {
+                                    cancelBlock();
+                                }
+                            } otherFailure:^(NSError *error) {
+                                if (failureBlock) {
+                                    failureBlock(error);
+                                }
+                            }];
+                            return;
+                        }
                     }
                 }
                 //验证失败，其他错误，直接返回错误信息
                 if (failureBlock) {
-                    NSString *errorMsg = [self errorDescription:error];
-                    NSError *failureErr = [NSError errorWithDomain:kErrorDomain code:error.code userInfo:@{NSLocalizedFailureReasonErrorKey:errorMsg}];
                     failureBlock(failureErr);
                 }
             }
@@ -220,15 +205,15 @@
                     successBlock();
                 }
             }else{
-                if (error.code == LAErrorUserCancel){//验证失败，用户点击了取消按钮
+                NSError *failureErr = [self authorizeErrorFromLAError:error];
+
+                if (failureErr.code == TTAuthorizeErrorCancel){//验证失败，用户点击了取消按钮
                     if (cancelBlock) {
                         cancelBlock();
                     }
                 }else{
                     //验证失败，其他错误，直接返回错误信息
                     if (failureBlock) {
-                        NSString *errorMsg = [self errorDescription:error];
-                        NSError *failureErr = [NSError errorWithDomain:kErrorDomain code:error.code userInfo:@{NSLocalizedFailureReasonErrorKey:errorMsg}];
                         failureBlock(failureErr);
                     }
                 }
@@ -238,7 +223,7 @@
         //验证失败，其他错误，直接返回错误信息
         if (failureBlock) {
             NSString *errorMsg = @"版本不支持系统密码验证";
-            NSError *failureErr = [NSError errorWithDomain:kErrorDomain code:-11 userInfo:@{NSLocalizedFailureReasonErrorKey:errorMsg}];
+            NSError *failureErr = [NSError errorWithDomain:kErrorDomain code:-1 userInfo:@{NSLocalizedFailureReasonErrorKey:errorMsg}];
             failureBlock(failureErr);
         }
     }
@@ -293,6 +278,54 @@
             break;
     }
     return errorMsg;
+}
+
+- (NSError *)authorizeErrorFromLAError:(NSError *)error{
+    NSString *errorMsg = [self errorDescription:error];
+    NSInteger code = TTAuthorizeErrorOtherwise;
+    if (error.code == LAErrorAuthenticationFailed) {
+        code = TTAuthorizeErrorFailed;
+    }
+    if (error.code == LAErrorUserCancel || error.code == LAErrorSystemCancel) {
+        code = TTAuthorizeErrorCancel;
+    }
+    if (@available(iOS 9.0, *)) {
+        if (error.code == LAErrorAppCancel) {
+            code = TTAuthorizeErrorCancel;
+        }
+    }
+    if (error.code == LAErrorTouchIDNotEnrolled) {
+        code = TTAuthorizeErrorNotEnrolled;
+    }
+    if (@available(iOS 11.0, *)) {
+        if (error.code == LAErrorBiometryNotEnrolled) {
+            code = TTAuthorizeErrorNotEnrolled;
+        }
+    }
+    if (error.code == LAErrorTouchIDNotAvailable) {
+        code = TTAuthorizeErrorNotAvailable;
+    }
+    if (@available(iOS 11.0, *)) {
+        if (error.code == LAErrorBiometryNotAvailable) {
+            code = TTAuthorizeErrorNotAvailable;
+        }
+    }
+    if (@available(iOS 9.0, *)) {
+        if (error.code == LAErrorTouchIDLockout) {
+            code = TTAuthorizeErrorLockout;
+        }
+    }
+    if (@available(iOS 11.0, *)) {
+        if (error.code == LAErrorBiometryLockout) {
+            code = TTAuthorizeErrorLockout;
+        }
+    }
+    if (error.code == LAErrorUserFallback) {
+        code = TTAuthorizeErrorFallback;
+    }
+    NSError *failureErr = [NSError errorWithDomain:kErrorDomain code:code userInfo:@{NSLocalizedFailureReasonErrorKey:errorMsg}];
+    
+    return failureErr;
 }
 
 #pragma mark - getter method -
