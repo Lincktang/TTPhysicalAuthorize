@@ -294,4 +294,12 @@
     }
     return errorMsg;
 }
+
+#pragma mark - getter method -
+- (NSString *)authDescription{
+    if (!_authDescription) {
+        return @"短时间内多次验证失败，需要验证手机密码";
+    }
+    return _authDescription;
+}
 @end
