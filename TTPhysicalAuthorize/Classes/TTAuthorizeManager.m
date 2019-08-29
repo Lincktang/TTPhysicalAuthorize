@@ -57,6 +57,7 @@
             type = TTAuthorizeBiometryTouchID;
         }
     }
+    _biometryType = type;
     if (block) {
         block(type,error);
     }
