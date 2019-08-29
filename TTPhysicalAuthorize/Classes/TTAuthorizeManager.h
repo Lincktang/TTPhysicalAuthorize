@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <LocalAuthentication/LocalAuthentication.h>
 
 typedef NS_ENUM(NSInteger,TTAuthorizeBiometryType) {
     TTAuthorizeBiometryNone,//不支持身份验证鉴权
