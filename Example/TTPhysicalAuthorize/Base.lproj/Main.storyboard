@@ -54,15 +54,41 @@
                                     <action selector="systemAuthorizeAction:" destination="whP-gf-Uak" eventType="touchUpInside" id="J2M-ST-asV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Kg-Od-8ze">
+                                <rect key="frame" x="37.5" y="344" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="BoH-SI-Md8"/>
+                                    <constraint firstAttribute="height" constant="30" id="hnD-gw-CCc"/>
+                                </constraints>
+                                <state key="normal" title="开启生物识别"/>
+                                <connections>
+                                    <action selector="singleAuthorizeAction:" destination="whP-gf-Uak" eventType="touchUpInside" id="Lgu-QU-Lsm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8R-gG-F7e">
+                                <rect key="frame" x="37.5" y="404" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dK3-Nx-bkY"/>
+                                    <constraint firstAttribute="width" constant="300" id="iIP-gI-8Ha"/>
+                                </constraints>
+                                <state key="normal" title="重置single单例"/>
+                                <connections>
+                                    <action selector="resetSingleAuthorizeAction:" destination="whP-gf-Uak" eventType="touchUpInside" id="F43-18-MMX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NZd-bo-bNR" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="1KT-R1-SSk"/>
+                            <constraint firstItem="3Kg-Od-8ze" firstAttribute="top" secondItem="kGf-AD-cIP" secondAttribute="bottom" constant="30" id="3JU-gJ-tfg"/>
                             <constraint firstItem="NZd-bo-bNR" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="100" id="8il-Jq-AL8"/>
+                            <constraint firstItem="a8R-gG-F7e" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="IKX-2z-SAG"/>
                             <constraint firstItem="kGf-AD-cIP" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="IRm-sK-auO"/>
                             <constraint firstItem="kGf-AD-cIP" firstAttribute="top" secondItem="gsb-md-Q2A" secondAttribute="bottom" constant="30" id="SZx-6a-dIK"/>
+                            <constraint firstItem="3Kg-Od-8ze" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="aaN-75-k32"/>
                             <constraint firstItem="gsb-md-Q2A" firstAttribute="top" secondItem="NZd-bo-bNR" secondAttribute="bottom" constant="30" id="f0E-sd-Eed"/>
                             <constraint firstItem="gsb-md-Q2A" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="r9p-kP-JgG"/>
+                            <constraint firstItem="a8R-gG-F7e" firstAttribute="top" secondItem="3Kg-Od-8ze" secondAttribute="bottom" constant="30" id="uxh-Ee-gyQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dG3-6y-8dR"/>

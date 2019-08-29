@@ -40,7 +40,7 @@ typedef NS_ENUM(NSInteger,TTAuthorizeBiometryType) {
 - (void)canSupportAuthorize:(void (^) (TTAuthorizeBiometryType type, NSError *error))block;
 
 /**
- 启动生物识别身份验证
+ 启动生物识别身份验证，每次都会启动面容或指纹识别（即系统弹框）
 
  @param successBlock 验证成功后的回调方法
  @param backBlock 点击验证错误后自定义标题按钮的回调方法
@@ -52,6 +52,23 @@ typedef NS_ENUM(NSInteger,TTAuthorizeBiometryType) {
                        cancel:(void (^) (void))cancelBlock
                  otherFailure:(void (^) (NSError *error))failureBlock;
 
+/**
+ 启动单例生物识别验证，此验证成功一次后再次验证时，会直接返回成功，不会再次识别面容或指纹（即系统弹框）
+
+ @param successBlock 验证成功后的回调方法
+ @param backBlock 点击验证错误后自定义标题按钮的回调方法
+ @param cancelBlock 点击验证错误后取消按钮的回调方法
+ @param failureBlock 验证错误其他错误回调方法
+ */
+- (void)applySingleAuthorizeSuccess:(void (^) (void))successBlock
+                           fallback:(void (^) (void))backBlock
+                             cancel:(void (^) (void))cancelBlock
+                       otherFailure:(void (^) (NSError *error))failureBlock;
+
+/**
+ 重置单例生物验证，让单例验证重新弹出验证框（即系统弹框）
+ */
+- (void)resetSingleContext;
 /**
  启动生物识别验证附带系统密码验证
 

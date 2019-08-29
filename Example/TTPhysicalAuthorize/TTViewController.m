@@ -63,6 +63,25 @@
     }];
 }
 
+- (IBAction)singleAuthorizeAction:(UIButton *)sender {
+    [[TTAuthorizeManager defaultManager] setAuthDescription:@"single面容ID短时间内失败多次，需要验证手机密码"];
+    [[TTAuthorizeManager defaultManager] setFallbackTitle:@"single验证登录密码"];
+    
+    [[TTAuthorizeManager defaultManager] applySingleAuthorizeSuccess:^{
+        NSLog(@"验证成功");
+    } fallback:^{
+        NSLog(@"验证登录密码");
+    } cancel:^{
+        NSLog(@"用户取消验证");
+    } otherFailure:^(NSError *error) {
+        NSLog(@"其他验证错误%@",error);
+    }];
+}
+
+- (IBAction)resetSingleAuthorizeAction:(UIButton *)sender {
+    [[TTAuthorizeManager defaultManager] resetSingleContext];
+}
+
 - (void)showMessage:(NSString *)message{
     UIAlertController *vc = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
     [vc addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];
