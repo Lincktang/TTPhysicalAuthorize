@@ -74,7 +74,7 @@
             context.localizedCancelTitle = _cancelTitle;
         }
     }
-    [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:_authDescription reply:^(BOOL success, NSError *error) {
+    [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:self.authDescription reply:^(BOOL success, NSError *error) {
         if (success) {
             //验证成功，主线程处理UI
             if (successBlock) {
@@ -145,7 +145,7 @@
             _singleContext.localizedCancelTitle = _cancelTitle;
         }
     }
-    [_singleContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:_authDescription reply:^(BOOL success, NSError *error) {
+    [_singleContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:self.authDescription reply:^(BOOL success, NSError *error) {
         if (success) {
             //验证成功，主线程处理UI
             if (successBlock) {
@@ -213,7 +213,7 @@
 - (void)applySystemAuthorizeSuccess:(void (^)(void))successBlock cancel:(void (^)(void))cancelBlock otherFailure:(void (^)(NSError *))failureBlock{
     if (@available(iOS 9.0, *)) {
         LAContext *context = [[LAContext alloc] init];
-        [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:_authDescription reply:^(BOOL success, NSError *error) {
+        [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:self.authDescription reply:^(BOOL success, NSError *error) {
             if (success) {
                 //验证成功，主线程处理UI
                 if (successBlock) {
