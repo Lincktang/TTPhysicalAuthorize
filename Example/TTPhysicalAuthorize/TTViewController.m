@@ -41,7 +41,7 @@
 
 - (IBAction)applyAuthorizeAction:(UIButton *)sender {
     [[TTAuthorizeManager defaultManager] setAuthDescription:@"面容ID短时间内失败多次，需要验证手机密码"];
-    [[TTAuthorizeManager defaultManager] setFallbackTitle:@"验证登录密码"];
+    [[TTAuthorizeManager defaultManager] setFallbackTitle:@""];
     
     [[TTAuthorizeManager defaultManager] applyAuthorizeSuccess:^{
         NSLog(@"验证成功");

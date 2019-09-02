@@ -13,10 +13,11 @@
 
 @interface TTAuthorizeManager()
 @property (nonatomic, strong)LAContext* singleContext;
+@property (nonatomic, assign)TTAuthorizeBiometryType privateType;
 @end
 
 @implementation TTAuthorizeManager
-
+@dynamic biometryType;
 #pragma mark - install method -
 + (instancetype)defaultManager{
     static TTAuthorizeManager *instanceManager;
@@ -57,7 +58,7 @@
             type = TTAuthorizeBiometryTouchID;
         }
     }
-    _biometryType = type;
+    self.privateType = type;
     if (block) {
         block(type,error);
     }
@@ -336,5 +337,12 @@
         return @"短时间内多次验证失败，需要验证手机密码";
     }
     return _authDescription;
+}
+
+- (TTAuthorizeBiometryType)biometryType{
+    if (_privateType == TTAuthorizeBiometryNone) {
+        [self canSupportAuthorize:nil];
+    }
+    return _privateType;
 }
 @end
