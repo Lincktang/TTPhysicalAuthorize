@@ -100,7 +100,7 @@
                     //如是TouchID验证，且捕获到此错误的，使用LAPolicyDeviceOwnerAuthentication
                     BOOL isUsedTouchId = YES;
                     if (@available(iOS 11.0, *)){
-                        isUsedTouchId = (self->_singleContext.biometryType == LABiometryTypeTouchID);
+                        isUsedTouchId = (self.biometryType == LABiometryTypeTouchID);
                     }
                     if (@available(iOS 9.0, *)) {
                         if (isUsedTouchId) {
@@ -164,7 +164,7 @@
                     //如是TouchID验证，且捕获到此错误的，使用LAPolicyDeviceOwnerAuthentication
                     BOOL isUsedTouchId = YES;
                     if (@available(iOS 11.0, *)){
-                        isUsedTouchId = (self->_singleContext.biometryType == LABiometryTypeTouchID);
+                        isUsedTouchId = (self.biometryType == LABiometryTypeTouchID);
                     }
                     if (@available(iOS 9.0, *)) {
                         if (isUsedTouchId) {
