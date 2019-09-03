@@ -94,33 +94,6 @@
                     cancelBlock();
                 }
             }else{
-                if (failureErr.code == TTAuthorizeErrorLockout) {
-                    //多次尝试指纹验证失败错误9.0后引入LAErrorTouchIDLockout,11.0后废弃改为LAErrorBiometryLockout
-                    //出现这些错误后TouchID验证无法打开，需要验证手机密码才能正常使用
-                    //如是TouchID验证，且捕获到此错误的，使用LAPolicyDeviceOwnerAuthentication
-                    BOOL isUsedTouchId = YES;
-                    if (@available(iOS 11.0, *)){
-                        isUsedTouchId = (self.biometryType == LABiometryTypeTouchID);
-                    }
-                    if (@available(iOS 9.0, *)) {
-                        if (isUsedTouchId) {
-                            [self applySystemAuthorizeSuccess:^{
-                                if (successBlock) {
-                                    successBlock();
-                                }
-                            } cancel:^{
-                                if (cancelBlock) {
-                                    cancelBlock();
-                                }
-                            } otherFailure:^(NSError *error) {
-                                if (failureBlock) {
-                                    failureBlock(error);
-                                }
-                            }];
-                            return;
-                        }
-                    }
-                }
                 //验证失败，其他错误，直接返回错误信息
                 if (failureBlock) {
                     failureBlock(failureErr);
@@ -158,33 +131,6 @@
                     cancelBlock();
                 }
             }else{
-                if (failureErr.code == TTAuthorizeErrorLockout) {
-                    //多次尝试指纹验证失败错误9.0后引入LAErrorTouchIDLockout,11.0后废弃改为LAErrorBiometryLockout
-                    //出现这些错误后TouchID验证无法打开，需要验证手机密码才能正常使用
-                    //如是TouchID验证，且捕获到此错误的，使用LAPolicyDeviceOwnerAuthentication
-                    BOOL isUsedTouchId = YES;
-                    if (@available(iOS 11.0, *)){
-                        isUsedTouchId = (self.biometryType == LABiometryTypeTouchID);
-                    }
-                    if (@available(iOS 9.0, *)) {
-                        if (isUsedTouchId) {
-                            [self applySystemAuthorizeSuccess:^{
-                                if (successBlock) {
-                                    successBlock();
-                                }
-                            } cancel:^{
-                                if (cancelBlock) {
-                                    cancelBlock();
-                                }
-                            } otherFailure:^(NSError *error) {
-                                if (failureBlock) {
-                                    failureBlock(error);
-                                }
-                            }];
-                            return;
-                        }
-                    }
-                }
                 //验证失败，其他错误，直接返回错误信息
                 if (failureBlock) {
                     failureBlock(failureErr);
@@ -313,6 +259,9 @@
             code = TTAuthorizeErrorNotAvailable;
         }
     }
+    //多次尝试指纹验证失败错误9.0后引入LAErrorTouchIDLockout,11.0后废弃改为LAErrorBiometryLockout
+    //出现这些错误后TouchID验证无法打开，需要验证手机密码才能正常使用
+    //如是TouchID验证，且捕获到此错误的，使用LAPolicyDeviceOwnerAuthentication
     if (@available(iOS 9.0, *)) {
         if (error.code == LAErrorTouchIDLockout) {
             code = TTAuthorizeErrorLockout;
