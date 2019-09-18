@@ -66,6 +66,7 @@
 		ABF975E7D1D6199ABCCBB88B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B02616605EF64EC0FD97D0C7 /* Pods-TTPhysicalAuthorize_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTPhysicalAuthorize_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TTPhysicalAuthorize_Tests/Pods-TTPhysicalAuthorize_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB34BDDE185FE0AADD37D587 /* TTPhysicalAuthorize.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TTPhysicalAuthorize.podspec; path = ../TTPhysicalAuthorize.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D7CC961C2327ACAC0075DED7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DFBFD90B91BD9B11F5F9FDF4 /* Pods-TTPhysicalAuthorize_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTPhysicalAuthorize_Example.debug.xcconfig"; path = "Target Support Files/Pods-TTPhysicalAuthorize_Example/Pods-TTPhysicalAuthorize_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +131,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7CC961C2327ACAC0075DED7 /* MobileCoreServices.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,

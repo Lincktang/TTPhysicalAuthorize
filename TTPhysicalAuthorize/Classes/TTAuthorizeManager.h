@@ -30,6 +30,11 @@ typedef NS_ENUM(NSInteger,TTAuthorizeError) {
  只用执行了- (void)canSupportAuthorize:(void (^) (TTAuthorizeBiometryType type, NSError *error))block;方法后才有正确的值
  */
 @property (nonatomic, readonly) TTAuthorizeBiometryType biometryType;
+
+/**
+ 当前使用的指纹或面容信息，iOS9.0后可用，判断指纹是否有变化时可以利用，只有在验证面容或指纹成功后才有值
+ */
+@property (nonatomic, readonly) NSData *biometryData;
 /**
  生物识别身份认证，描述文字
  */

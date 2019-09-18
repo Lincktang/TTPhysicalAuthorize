@@ -78,6 +78,9 @@
     }
     [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:self.authDescription reply:^(BOOL success, NSError *error) {
         if (success) {
+            if (@available(iOS 9.0,*)) {
+                self->_biometryData = context.evaluatedPolicyDomainState;
+            }
             //验证成功，主线程处理UI
             if (successBlock) {
                 successBlock();
@@ -115,6 +118,9 @@
     }
     [_singleContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:self.authDescription reply:^(BOOL success, NSError *error) {
         if (success) {
+            if (@available(iOS 9.0,*)) {
+                self->_biometryData = self->_singleContext.evaluatedPolicyDomainState;
+            }
             //验证成功，主线程处理UI
             if (successBlock) {
                 successBlock();
@@ -149,6 +155,9 @@
         LAContext *context = [[LAContext alloc] init];
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:self.authDescription reply:^(BOOL success, NSError *error) {
             if (success) {
+                if (@available(iOS 9.0,*)) {
+                    self->_biometryData = context.evaluatedPolicyDomainState;
+                }
                 //验证成功，主线程处理UI
                 if (successBlock) {
                     successBlock();
