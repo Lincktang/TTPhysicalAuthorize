@@ -14,6 +14,7 @@
 @interface TTAuthorizeManager()
 @property (nonatomic, strong)LAContext* singleContext;
 @property (nonatomic, assign)TTAuthorizeBiometryType privateType;
+@property (nonatomic, strong)NSData *privateBiometryData;
 @end
 
 @implementation TTAuthorizeManager
@@ -57,6 +58,9 @@
         } else {
             type = TTAuthorizeBiometryTouchID;
         }
+        if (@available(iOS 9.0,*)) {
+            self.privateBiometryData = _authorizeContext.evaluatedPolicyDomainState;
+        }
     }
     self.privateType = type;
     if (block) {
@@ -79,7 +83,7 @@
     [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:self.authDescription reply:^(BOOL success, NSError *error) {
         if (success) {
             if (@available(iOS 9.0,*)) {
-                self->_biometryData = context.evaluatedPolicyDomainState;
+                self.privateBiometryData = context.evaluatedPolicyDomainState;
             }
             //验证成功，主线程处理UI
             if (successBlock) {
@@ -119,7 +123,7 @@
     [_singleContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:self.authDescription reply:^(BOOL success, NSError *error) {
         if (success) {
             if (@available(iOS 9.0,*)) {
-                self->_biometryData = self->_singleContext.evaluatedPolicyDomainState;
+                self.privateBiometryData = self->_singleContext.evaluatedPolicyDomainState;
             }
             //验证成功，主线程处理UI
             if (successBlock) {
@@ -156,7 +160,7 @@
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:self.authDescription reply:^(BOOL success, NSError *error) {
             if (success) {
                 if (@available(iOS 9.0,*)) {
-                    self->_biometryData = context.evaluatedPolicyDomainState;
+                    self.privateBiometryData = context.evaluatedPolicyDomainState;
                 }
                 //验证成功，主线程处理UI
                 if (successBlock) {
@@ -302,5 +306,12 @@
         [self canSupportAuthorize:nil];
     }
     return _privateType;
+}
+
+- (NSData *)biometryData{
+    if (!_privateBiometryData) {
+        [self canSupportAuthorize:nil];
+    }
+    return _privateBiometryData;
 }
 @end
