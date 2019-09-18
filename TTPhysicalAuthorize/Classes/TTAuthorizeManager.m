@@ -309,9 +309,7 @@
 }
 
 - (NSData *)biometryData{
-    if (!_privateBiometryData) {
-        [self canSupportAuthorize:nil];
-    }
+    [self canSupportAuthorize:nil];
     return _privateBiometryData;
 }
 @end
