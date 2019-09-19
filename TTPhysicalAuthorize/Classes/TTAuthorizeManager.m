@@ -47,21 +47,24 @@
             self.privateBiometryData = _authorizeContext.evaluatedPolicyDomainState;
         }
     }
-    //无论成功与否，都能检测出是否支持使用生物识别
-    if (@available(iOS 11.0, *)) {
-        LABiometryType biometryType = _authorizeContext.biometryType;
-        switch (biometryType) {
-            case LABiometryTypeTouchID:
-                type = TTAuthorizeBiometryTouchID;
-                break;
-            case LABiometryTypeFaceID:
-                type = TTAuthorizeBiometryFaceID;
-                break;
-            default:
-                break;
+    //非其他的错误，即设备无硬件支持，或程序员手动禁止，都可捕获到设备支持的生物识别类型
+    if (error.code != TTAuthorizeErrorOtherwise) {
+        //无论成功与否，都能检测出是否支持使用生物识别
+        if (@available(iOS 11.0, *)) {
+            LABiometryType biometryType = _authorizeContext.biometryType;
+            switch (biometryType) {
+                case LABiometryTypeTouchID:
+                    type = TTAuthorizeBiometryTouchID;
+                    break;
+                case LABiometryTypeFaceID:
+                    type = TTAuthorizeBiometryFaceID;
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            type = TTAuthorizeBiometryTouchID;
         }
-    } else {
-        type = TTAuthorizeBiometryTouchID;
     }
     self.privateType = type;
     if (block) {
