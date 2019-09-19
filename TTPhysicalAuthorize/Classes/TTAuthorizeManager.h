@@ -16,6 +16,7 @@ typedef NS_ENUM(NSInteger,TTAuthorizeBiometryType) {
 typedef NS_ENUM(NSInteger,TTAuthorizeError) {
     TTAuthorizeErrorFailed,//身份认证不正确，对应错误LAErrorAuthenticationFailed
     TTAuthorizeErrorNotEnrolled,//未设置指纹/面容或未设置手机密码,对应错误LAErrorBiometryNotEnrolled，LAErrorTouchIDNotEnrolled
+    TTAuthorizeErrorPasscodeNotSet,//未设置或关闭了手机密码，无法使用面容或指纹，对应错误LAErrorPasscodeNotSet
     TTAuthorizeErrorNotAvailable,//未授权使用指纹/面容，对应错误LAErrorBiometryNotAvailable，LAErrorTouchIDNotAvailable
     TTAuthorizeErrorFallback,//反馈错误，用户点击错误弹窗非取消按钮外的另一个按钮是返回的错误类型对应错误LAErrorUserFallback
     TTAuthorizeErrorCancel,//用户或APP或系统，取消认证，用户点击取消，系统来电，APP手动终止LAErrorAppCancel，LAErrorSystemCancel，LAErrorUserCancel

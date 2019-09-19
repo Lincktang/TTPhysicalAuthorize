@@ -264,6 +264,9 @@
             code = TTAuthorizeErrorNotEnrolled;
         }
     }
+    if (error.code == LAErrorPasscodeNotSet) {
+        code = TTAuthorizeErrorPasscodeNotSet;
+    }
     if (error.code == LAErrorTouchIDNotAvailable) {
         code = TTAuthorizeErrorNotAvailable;
     }
